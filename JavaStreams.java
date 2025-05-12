@@ -134,4 +134,4 @@ public class JavaStreams
 //**NOTE** 
 //Case Sensitive to outputs that are expected
 //There is no life for intermediate operation if there is no terminal operation
-//Terminal operation will execute only if initial operation (filter) returns true
+//Terminal operation will execute only if intermediate operation (filter) returns true
