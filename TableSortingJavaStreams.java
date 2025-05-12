@@ -16,9 +16,9 @@ public class TableSortingJavaStreams
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Veg/fruit name']")).click(); //Clicking the web element to sort the values within the table
-		List <WebElement> veggieList = driver.findElements(By.xpath("//tr/td[1]")); //Locate values within the table
-		List <String> origVeggieList = veggieList.stream().map(s->s.getText()).collect(Collectors.toList()); //Store located values within the table thru streams and storing it to a new list (origVeggieList)
-		List <String> sortedVeggieList = origVeggieList.stream().sorted().collect(Collectors.toList()); //New list stored will be sorted and storing it again to a new list (sortedVeggieList)
-		Assert.assertTrue(origVeggieList.equals(sortedVeggieList)); //Comparing lists if values match (origVeggieList and sortedVeggieList)
+		List <WebElement> itemList = driver.findElements(By.xpath("//tr/td[1]")); //Locate values within the table
+		List <String> origItemList = itemList.stream().map(s->s.getText()).collect(Collectors.toList()); //Store located values within the table thru streams and storing it to a new list (origItemList)
+		List <String> sortedItemList = origItemList.stream().sorted().collect(Collectors.toList()); //New list stored will be sorted and storing it again to a new list (sortedItemList)
+		Assert.assertTrue(origItemList.equals(sortedItemList)); //Comparing lists if values match (origItemList and sortedItemList)
 	}
 }
